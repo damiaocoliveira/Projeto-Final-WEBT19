@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaginaPrincipal</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+    <style>
+        /* O asterisco (*) é usado no começo do CSS para tira a formatação do navegador, reseta o CSS, tira a margem  */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*box-sizing é utilizada para alterar a propriedade padrao da box model usada para calcular larguras (widths) e alturas (heights) dos elementos*/
+        }
+
+        body {
+            background-image: url('./imagens/Kitana\ 12\ -\ Modificada.jpg');
+        }
+
+        .topo {
+            background-color: rgba(6, 2, 27, 0.493);
+            /* Dois últimos digitos 0.5 é o que deixa transparente*/
+        }
+
+        .audiomkabertura {
+            position: relative;
+            left: 82%;
+        }
+
+        .videomk {
+            margin-top: 55px;
+
+        }
+
+        /* +++++++++++++++++++++++++++++++++++++++++ COMECO BOTAOA ANIMADO +++++++++++++++++++++++++++++++++ */
+        .efeito-6 {
+            background: #25088d;
+            /*cor do botao da frente */
+            transform-style: preserve-3d;
+            top: 230px;
+            /* posição do botão azul MK */
+            left: 75px;
+        }
+
+        .efeito-6::after {
+            top: -100%;
+            left: 0px;
+            width: 100%;
+            padding: 20px;
+            position: absolute;
+            background: #cf2a0c;
+            border-radius: 10px;
+            box-sizing: border-box;
+            /* serve para que durante a rotacao do botao as duas partes fiquem do mesmo tamanho */
+            content: 'FATALITY';
+            font-family: Georgia;
+            transform-origin: left bottom;
+            transform: rotatex(90deg);
+        }
+
+        .efeito-6:hover {
+            transform-origin: center bottom;
+            transform: rotateX(-90deg) translateY(100%);
+        }
+
+
+        /* ++++++++++++++++++++++++++++++++++++++++++++++ RODAPÉ ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+        .footer.footer {
+            height: 100%;
+            background: rgb(12, 12, 12);
+            position: relative;
+            top: 610px;
+        }
+
+        .fale-conosco a {
+            text-decoration: none;
+        }
+
+        .contato {
+            margin-left: 45px;
+        }
+
+        .footer.footer .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .footer.footer .container>div {
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 1rem 0.9rem;
+        }
+
+        .footer h2 {
+            color: rgb(241, 241, 241);
+        }
+
+        .footer p {
+            font-size: 15px;
+            color: rgb(255, 255, 255);
+        }
+
+        .footer .sobre-nos {
+            margin-left: 30px;
+        }
+
+        .rede-sociais {
+            color: #fff(235, 10, 243);
+            align-items: center;
+        }
+
+        .rede-sociais .fa-facebook-f {
+            height: 0px;
+            width: 17px;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 0px 2px 0;
+            color: #1900ff;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .rede-sociais .fa-facebook-f:hover {
+            color: #fff;
+            transform: translate(-9px);
+        }
+
+        .rede-sociais .fa-twitter {
+            height: 0px;
+            width: 17px;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 0px 2px 0;
+            color: #00e1ff;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .rede-sociais .fa-twitter:hover {
+            color: #fff;
+            transform: translate(-9px);
+        }
+
+        .rede-sociais .fa-instagram {
+            height: 0px;
+            width: 17px;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 0px 2px 0;
+            color: #ee5edb;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .rede-sociais .fa-instagram:hover {
+            color: #fff;
+            transform: translate(-9px);
+        }
+
+        .rede-sociais .fa-whatsapp {
+            height: 0px;
+            width: 17px;
+            font-size: 20px;
+            line-height: 40px;
+            margin: 0px 2px 0;
+            color: #00f870;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .rede-sociais .fa-whatsapp:hover {
+            color: #fff;
+            transform: translate(-9px);
+        }
+
+        .texto-copy {
+            color: rgb(10, 10, 10);
+            text-align: center;
+        }
+
+        .texto-artigos {
+            background-color: rgb(130, 149, 149);
+            width: 50%;
+        }
+    </style>
+
+
+    <header class="topo">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="https://streetfighter.fandom.com/wiki/Chun-Li">Autor</a></li>
+                <li><a href="pagina DOWNLOADS.html">Downloads</a></li>
+                <li><a href="https://www.myinstants.com/media/sounds/hadouken.mp3">Inscrições</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- VIDEO LINK -->
+    <div id="videomk">
+        <iframe width="495" height="310" src="https://www.youtube.com/embed/8EvvTjhJkus" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <!-- Nesse caso coloquei o logo MK direto na imagem, ja deixei a imagem com o logo fixado
+    </div>
+        <div class="logo">
+            <img src="./imagens/Logo KOF.png" width="60%">
+    </div> 
+-->
+
+    <!-- USEI LINK EXTERNO PARA PEGAR A MÚSICA -->
+
+    <div class="audiomkabertura">
+        <audio controls="controls" src="https://ringtonazer.b-cdn.net/fetch/6e/6ed60ca00f6f22d3c5861f6481a1f33e.mp3">
+    </div>
+
+
+    <!-- BOTAO COM SOM -->
+    <div class="btnsMK">
+        <button onmousedown="musicaBotao()" type="button" class="efeito efeito-6"> FINISH HIM!!</button>
+    </div>
+
+    <script src="./js/MK.js"></script>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="sobre-nos">
+                <h2>Sobre-Nós</h2>
+                <p>Campeonato XPlay</p>
+            </div>
+
+            <div class="contato">
+                <h2>Contato</h2>
+                <p>damiaocoliveira@gmail.com</p>
+                <p>(11)95743-4783</p>
+            </div>
+
+            <div class="fale-conosco">
+                <a target="blank" href="./Contato.html">
+                    <h2>Fale Conosco</h2>
+                    <p>clique aqui</p>
+                </a>
+                <div class="flex-row"></div>
+
+            </div>
+
+            <div class="rede-sociais">
+                <h2>Rede Sociais</h2>
+                <!--onde esta o # vai o link da rede social-->
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5511958946110&text=Ola%20Egnaldo%20.Tudo%20bem..%3F"><i
+                        class="fab fa-whatsapp"></i></a>
+            </div>
+    </footer>
+
+
+
+</body>
+
+
+
+</html>
+
+
+<!-- ========================================================================== -->
+<!-- // HTML - BOTÃO EXTRA FATALITY 
+// <button onclick="musicaBotao()">Fatalty</button>
+
+// java script -  BOTÃO EXTRA FATALITY
+// function musicaBotao(){
+//     var som = new Audio('fatality.mp3');
+//     som.addEventListener("canplaythrough", function(){
+//         som.play();
+//     })
+// }
+
+============================================================================== -->

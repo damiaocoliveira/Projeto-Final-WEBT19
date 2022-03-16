@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap'); /* fonte de texto externa Google Fonts  */
+
+/* O asterisco (*) é usado no começo do CSS para tira a formatação do navegador, reseta o CSS, tira a margem  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*box-sizing é utilizada para alterar a propriedade padrao da box model usada para calcular larguras (widths) e alturas (heights) dos elementos*/
+} 
+
+ul{
+    list-style-type: none; /* remove icone de bolinha */
+}
+
+a{
+    text-decoration: none; /* tirar o risco debaixo da palavra link */
+    color: inherit; /* inherit significa herdada - nesse caso, a cor esta sendo herdada do pai */
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++  GRID ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.embrulho{                              /* priemiro é necessário criar uma classe, exemplo embrulho (container, wrap)*/
+    width: 580px;
+    margin: 0 auto ;
+}
+
+body{
+    /* background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../imagens/floresta.jpg); /* para colocar a imagem opaca e tambem para fazer degradee */
+    background-size: cover; /* da no mesmo usar 100% para cobrir toda a tela */
+    background-position: center;
+    background-repeat: no-repeat; /* para a imagem nao repetir */
+    height: 100vh; /* ajusta a imagem para qualquer tamanho de tela */
+
+}
+
+/* ************************** COMECO ESTILO CABECALHO ++++++++++++++++++++++++++++++++++++++++ */
+#cabecalho-main{                        /* header esta fazendo o papel de pai, onde o display flex deve ser aplicado */
+    display: flex;                      /* o display flex, deve ser colocado no sempre no pai */
+    flex-direction: column;             /*estamos dizendo que o objeto ficara em coluna */
+    align-items: center;
+    justify-content: space-around;     /* para distanciar a imagem do titulo - para funcionar tem que estar usando o display flex */
+    height: 250px;
+
+}
+
+#foto-perfil{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;        /* ajusta o objeto dentro do quadrado, serve para criar uma moldura na imagem e evitar que ela distorca */
+    object-position: center;
+    border-radius: 50%;       /* deixa a imagem arredondada, nesse caso 50% */
+
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #8200bf;
+    font-weight: 600;
+
+}
+
+/* ========================================================================================= */
+.topo {
+    background-color: #8343a1; /* último digito 0.6 deixa transparente*/
+    width: 100%;
+    height: 90px;
+    padding: 15px;
+} 
+
+.menu {
+    width: 100%;
+    height: 60;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    bottom: 50%;
+}
+
+.menu ul {
+    width: 600px;
+    height: 60px; /* Quadrado colorido que circunda as letras no menu */
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    justify-content:left;
+
+}
+
+.menu ul li {
+    height: 100%;
+    transition: all 0.4s;
+    position: relative;
+    cursor: pointer;
+    position: relative;  
+
+}
+
+/*after é o curso colorido em cima das palavras +++ hover é para o objeto ser movimento de ir para a frente */
+.menu ul li::after {
+    content: "";
+    height: 4px;
+    width: 0%;
+    top: 100%;
+
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    transition: all 0.4s;
+}
+
+.menu ul li:hover {
+    width: 100%;
+    height: 75%; /* quadrado em volta do nome no cabecalho */
+    background-color:rgba(236, 178, 228, 0.6); 
+    /* z-index:5; z-index = faz sobreposição de elementos */
+    /* text-decoration: underline; /* sublinhar o texto - criar um risco embaixo do texto */ 
+    border-radius: 5%;
+    padding: 3px;
+}
+
+.menu a {
+    color: rgb(255, 255, 255); /* cor das letras dentro do menu */
+    text-decoration: none;
+    text-transform: uppercase; /*uppercase deixa as letras em caixa alta */
+    font-family:'Times New Roman', Times, serif;
+    font-size: 17px;
+    padding: 10px 50px;
+}
+
+.menu ul li a {
+    height: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* +++++++++++++++++++++++++++ COMECO SESSAO LINKS +++++++++++++++++++++++++++++++++++++++ */
+.link{
+    width: 100%;
+}
+
+.link > a{
+    display: block; /* tranforma o texto em linha em texto em cai */
+    background-color: #ff0099;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-weight: 600;
+    padding: 20px 0; /* padding é a margem inerna */
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+/* hover pseudoclasse, vai alterar o elemento em uma condicao especial - hover = quando o mause do usuário passar emcima ele irá mudar algo*/
+.link > a:hover{
+    background-color: #fff;
+    color: #ff0099;
+}
+
+
+/* +++++++++++++++++++++++++++++++ COMECO RODAPE ++++++++++++++++++++++++++++++++++++++++++ */
+#rodape-simbolos{
+    display: flex; /* so de colocar display flex os simbolos ja ficam um do lado do outro */
+    justify-content: center;
+}
+
+.simbolo{
+    font-size: 30px;
+    color: #8200bf;
+    margin: 0 20px; /* margin podemos separar os objetos */
+    
+}
+
+.simbolo:hover{
+    /* color: #c7c7c7; */
+    opacity: 0.5;
+}

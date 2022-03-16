@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaginaPrincipal</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://kit.fontawesome.com/629597ccff.js" crossorigin="anonymous"></script> <!-- para usar icones do site fontawesome -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<body>
+
+  <header class="topo">
+    <nav class="menu">
+      <ul>
+        <li><a href="./Pagina1 Introducao.html" target="blank">Início</a></li> 
+        <li><a href="pagina2 autor.html" target="blank">Autor</a></li>
+        <li><a href="./pagina5 Dark.html" target="blank">Darkstalkers</a></li> 
+        <li><a href="./pagina4 MK.html" target="blank">Mortal Kombat</a></li> 
+        <li><a href="./index.html" target="blank">Street Figter</a></li> 
+        <!-- target="blank" faz com que nova pagina (aba) seja aberto. Uma nova aba e não saia da pagina original-->
+        <li><a href="https://www.myinstants.com/media/sounds/hadouken.mp3" target="blank">Inscrições</a></li>
+        <!-- <li><a href="https://www.myinstants.com/media/sounds/hadouken.mp3">Inscrições</a></li> - AUDIO HADOUKEN -->
+        <li><a href="pagina DOWNLOADS.html" target="blank">Downloads</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="manchete"></h1> <!-- para escrever na faixa do rosto da Chun-li -->
+    <h2 class="headline"> </h2> <br><br>
+  </main>
+
+  <!-- ESSE AUDIO FOI FEITO DOWNLOAD -->
+    <div class="audio" >      
+    <p>Música tema Chun-li</p> 
+    <audio src="audio/Chun Li - Musica da tela.mp3" autoplay controls loop> 
+      <!-- controles = sao os elementos de audio, exemplo a barra de audio que aumenta e baixa o volume -->
+    </div>
+
+  <div class="logo">
+    <img src="imagens/logo.png" width="60%">
+  </div>
+
+  <div id="videochunli">
+    <p>História Chun-li</p>
+    <iframe width="450" height="250" src="https://www.youtube.com/embed/heRziqjV6Y0" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <!-- <footer>
+    <div class="rodape">
+      <p> By Damião, 2022</p>
+    </div>
+  </footer> -->
+
+
+  <footer class="footer">
+    <div class="container">
+        <div class="sobre-nos">
+            <h2>Sobre-Nós</h2>
+            <p>Campeonato XPlay</p>
+        </div>
+
+        <div class="contato">
+            <h2>Contato</h2>
+            <p>damiaocoliveira@gmail.com</p>
+            <p>(11)95743-4783</p>
+        </div>
+
+        <div class="fale-conosco">
+            <a target="blank" href="./Contato.html">
+                <h2>Fale Conosco</h2>
+                <p>clique aqui</p>
+            </a>
+            <div class="flex-row"></div>
+
+        </div>
+
+        <div class="rede-sociais">
+            <h2>Rede Sociais</h2>
+            <!--onde esta o # vai o link da rede social-->
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5511958946110&text=Ola%20Egnaldo%20.Tudo%20bem..%3F"><i
+                    class="fab fa-whatsapp"></i></a>
+        </div>
+</footer>
+
+
+  <!-- +++++++++++++++++++++ INICIO BOTOES ANIMADOS - MODO 1 DE FAZER   https://codepen.io/danielvillalba/pen/dXjkGL  ++++++++++++++++ -->
+  <section class=botones>
+    <div id="separar">
+      <!-- <h3 class=titulo> “Aperte” <h3>  nome encima do botao -->
+      <span onmousedown="musicaBotaoAzul()" class="boton5">“Kikoken”</span> <!-- nome dento do botao -->
+    </div>
+  </section>
+
+
+
+  <!-------------------------- BOTOES ANIMADOS - MODO 2 DE FAZER    https://www.youtube.com/watch?v=_w57bWIPZKE ------------------------------------------->
+  <div class="btns">
+    <button onmousedown="musicaBotao()" type="button" class="efeito efeito-1"> "Spinning Bird Kick” </button>
+  </div>
+
+
+  <script src="./js/street.js"></script>
+
+
+
+  <!-------------------------- COPIA COMPLETA DOS BOTOES ANIMADOS MODELO 1
+    <section class=botones>
+        <div id="separar">
+          <h3 class=titulo> Overlay Horizontal:<h3><br/>
+          <span class="boton">Probar Hover</span>
+        </div>
+        <div id="separar">
+          <h3 class=titulo> Overlay Vertical:<h3><br/>
+          <span class="boton2">Probar Hover</span>
+        </div>
+        <div id="separar">
+          <h3 class=titulo> Relleno de Color:<h3><br/>
+          <span class="boton3">Probar Hover</span>
+        </div>
+        <div id="separar">
+          <h3 class=titulo> Efecto Resplandor:<h3><br/>
+          <span class="boton4">Probar Hover</span>
+        </div>
+            <div id="separar">
+          <h3 class=titulo> Efecto Resplandor 2:<h3><br/>
+          <span class="boton5">Probar Hover</span>
+        </div>     
+      </section>
+      -------------------->
+
+
+
+
+      
+
+</body>
+
+</html>
